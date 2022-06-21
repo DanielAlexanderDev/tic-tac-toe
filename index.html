@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/088bca8cfe.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">  
+   <link rel="stylesheet" href="./styles/style.css">
+   <title>Tic Tac Toe </title>
+</head>
+<body>
+   <main>
+      <aside class="header">
+         <h1>TIC TAC TOE </h1>
+      </aside>
+      <section class="table-container">
+         <div class="msg-container">
+            <h2 id="msg-text" class="message-text" style="color: white"></h2>
+         </div>
+         <table class="table">
+            <tr class="row">
+               <td id="top-left" class="top-left cell"></td>
+               <td id="top-center" class="cell"></td>
+               <td id="top-right" class="top-right cell"></td>
+            </tr>
+            <tr class="row">
+               <td id="center-left" class="cell"></td>
+               <td id="center" class="cell"></td>
+               <td id="center-right" class="cell"></td>
+            </tr>
+            <tr class="row">
+               <td id="bot-left" class="bottom-left cell"></td>
+               <td id="bot-center" class="cell"></td>
+               <td id="bot-right" class="bottom-right cell"></td>
+            </tr>
+         </table>
+         <button type="button" id="restart-button">Jugar de Nuevo</button>
+         <p class="credits-text">Designed by <strong>Daniel Alexander</p>
+      </section>
+      <section class="footer-container">
+         <aside class="footer2">
+            <ul class="social-container">
+               <i class="fa-solid fa-angles-down" id="downArrow"></i>
+               <li><i class="fa-brands fa-github"></i></li>
+               <li><i class="fa-brands fa-linkedin-in"></i></li>
+               <li><i class="fa-brands fa-twitter"></i></li>
+               <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+         </aside>
+         <aside class="footer" id="footer">
+            <i class="fa-solid fa-angles-up" id="upArrow"></i>
+            REDES SOCIALES
+         </aside>
+      </section>
+   </main>
+   <script src="./src/index.js"></script>
+</body>
+</html>
