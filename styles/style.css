@@ -1,7 +1,6 @@
 :root{
-   --violet-neon :#E95678;
-   --blue-neon :#1D1F27;
-   --green-neon :#22ff59;
+   --main-color :#E95678;
+   --second-color :#1D1F27;
 }
 
 *{
@@ -18,7 +17,6 @@ html{
    display: flex;
    justify-content: center;
    align-items: center;
-   width: autp;
    height: 100vh;
    font-size: 2.3rem;
    font-weight: bold;
@@ -43,15 +41,18 @@ main{
 .msg-container {
    width: 50%;
    height: 50px;
-   margin: 0 auto;
    display: flex;
+   margin-bottom: 30px;
    justify-content: center;
    align-items: center;
+   text-align: center;
 }
 .message-text{
    font-size: 2.2rem;
    text-transform: uppercase;
-   
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset
 }
 .table-container{
    display: flex;
@@ -60,8 +61,12 @@ main{
    align-items: center;
 }
 .table{
-   width: 25%;
-   height: 400px;
+   width: 50%;
+   max-width: 550px;
+   min-width: 400px;
+   height: 50%;
+   min-height: 400px;
+   max-height: 550px;
    margin: 0 auto;
    padding: 30px;
    border: 4px #2E303E solid;
@@ -77,22 +82,21 @@ main{
    background-color: transparent;
    box-shadow: 0px 0px 12px  #69696979;
    text-align: center;
-   font-size: 2.9rem;
    font-weight: bold;
    
 }
 .cell:hover{
-   background-color:#2e303ed3;
+   background-color:#9da0b0d3;
 }
 
 .x-cell{
    margin: 0;
    padding: 0;
    text-align: center;
-   box-shadow: 0px 0px 11px  var(--violet-neon);
+   box-shadow: 0px 0px 11px  var(--main-color);
    font-size: 6em;
    font-weight: bold;
-   color: var(--violet-neon);
+   color: var(--main-color);
 }
 .o-cell{
    margin: 0;
@@ -101,23 +105,7 @@ main{
    box-shadow: 0px 0px 11px #2E303E;
    font-size: 6em;
    font-weight: bold;
-   color: var(--blue-neon);
-}
-.winner-class{
-   margin: 0;
-   padding: 0;
-   text-align: center;
-   font-size: 2.9rem;
-   font-weight: bold;
-   color: var(--green-neon);
-}
-.losser-class{
-   margin: 0;
-   padding: 0;
-   text-align: center;
-   font-size: 2.9rem;
-   font-weight: bold;
-   color: rgb(128, 128, 128);
+   color: var(--second-color);
 }
 .footer{
    display: flex;
@@ -207,11 +195,20 @@ main{
 
 .fa-solid, .fa-angles-up{
    cursor: pointer;
+   padding: 7px;
+   border-radius: 50%;
    position: absolute;
    bottom: 0;
    margin-bottom: 50px;
 }
-.fa
+
+.fa-angles-up:hover {
+   background-color:#fcf2ef;
+   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+.fa-angles-down:hover {
+   box-shadow: #30305c 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
 
 .fa-github,.fa-brands, .fa-angles-down {
    color: white;
@@ -222,4 +219,48 @@ main{
    font-size: 1.5rem;
    opacity: 0.7;
    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 650px){
+   main {
+      display: block;
+   }
+   .footer {
+      writing-mode: initial;
+      text-orientation: initial;
+      padding-bottom: 10px;
+   }
+   .footer2, .footer {
+      width: 100vw;
+      height: 10vh;
+   }
+   .social-container {
+      display: flex;
+      width: 80%;
+      writing-mode: initial;
+      text-orientation: initial;
+      justify-content: space-evenly;
+   }
+   .fa-angles-up {
+      margin-bottom: 0;
+   }
+   .header {
+      width: 100vw;
+      height: 10vh;
+      writing-mode: initial;
+      text-orientation: initial;
+   }
+   .credits-text {
+      position: relative;
+      margin-top: 100px;
+   }
+   .table {
+      margin-top: 30px;
+   }
+   .table-container{
+      margin-top: 30px;
+   }
+   .msg-container {
+      margin-bottom: 0;
+   }
 }

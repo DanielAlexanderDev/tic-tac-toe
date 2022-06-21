@@ -1,5 +1,6 @@
 const arrowButton = document.getElementById("upArrow");
 const downArrowButton = document.getElementById("downArrow");
+
 const handleShowSocial = () => {
   const footer = document.getElementById("footer");
   if (footer.style.display === "none") {
@@ -11,6 +12,7 @@ const handleShowSocial = () => {
     footer.style.display = "none";
   }
 };
+
 arrowButton.addEventListener("click", handleShowSocial);
 downArrowButton.addEventListener("click", handleShowSocial);
 
@@ -25,6 +27,7 @@ const cells = [
   (botCenter = document.getElementById("bot-center")),
   (botRight = document.getElementById("bot-right")),
 ];
+
 const restartButton = document.getElementById("restart-button");
 restartButton.addEventListener("click", clearTable);
 const text = document.getElementById("msg-text");
@@ -43,9 +46,11 @@ const WIN_COMBINATIONS = [
 
 const startGame = () => {
   currentTurn = "x";
+  text.innerText = "";
+  text.innerHTML = `${currentTurn} TURN`;
+  text.style.color = "#E95678";
   cells.forEach((cell) => {
     cell.innerText = "";
-    text.innerText = "";
     cell.classList.remove("o-cell");
     cell.classList.remove("x-cell");
     cell.removeEventListener("click", handleClick);
@@ -79,8 +84,8 @@ function placeMark(cell, turn) {
 
 function changeTurn(turn) {
   turn == "x"
-    ? ((currentTurn = "o"), (text.style = "color: #00EBFE"))
-    : ((currentTurn = "x"), (text.style = "color: #CF2BD0"));
+    ? ((currentTurn = "o"), (text.style = "color: #1D1F27"))
+    : ((currentTurn = "x"), (text.style = "color: #E95678"));
   text.innerHTML = `${currentTurn} TURN`;
 }
 
