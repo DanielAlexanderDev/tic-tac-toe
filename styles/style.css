@@ -63,11 +63,10 @@ main{
 .table{
    width: 50%;
    max-width: 550px;
-   min-width: 400px;
+   min-width: 350px;
    height: 50%;
-   min-height: 400px;
+   min-height: 350px;
    max-height: 550px;
-   margin: 0 auto;
    padding: 30px;
    border: 4px #2E303E solid;
    background-color: #FCE9E4;
@@ -86,7 +85,7 @@ main{
    
 }
 .cell:hover{
-   background-color:#9da0b0d3;
+   background-color:#f3efef;
 }
 
 .x-cell{

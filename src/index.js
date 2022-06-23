@@ -7,7 +7,6 @@ const handleShowSocial = () => {
     footer.style.display = "flex";
     footer.style.position = "absolute";
     footer.style.zIndex = "10";
-    console.log(footer.style.display);
   } else {
     footer.style.display = "none";
   }
